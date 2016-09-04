@@ -14,9 +14,7 @@ niji://$action?$key=$val&$key2=$val2&...
 
 Applies a theme.
 
-Example:
-[`niji://apply?cmd=zenbu -e&name=name&yaml=key: value`]
-(`niji://apply?cmd=zenbu -e&name=name&yaml=key: value`)
+Example: `niji://apply?cmd=zenbu -e&name=name&yaml=key: value`
 
 Required keys:
 
@@ -30,9 +28,7 @@ Required keys:
 
 Saves a theme.
 
-Example:
-[`niji://save?root=~/.config/zenbu/variable_sets&name=name&yaml=key: value`]
-(`niji://save?root=~/.config/zenbu/variable_sets&name=name&yaml=key: value`)
+Example: `niji://save?root=~/.config/zenbu/variable_sets&name=name&yaml=key: value`
 
 Required keys:
 
