@@ -1,37 +1,29 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var Theme = require('./theme');
-
-var connection = mongoose.createConnection("mongodb://localhost/niji");
-
-var suiteSchema = new Schema({
+var themeSchema = new Schema({
   name: {
     type: String,
     required: true
-  }
+  },
   description: {
     type: String,
     required: true
   },
-  wallpaper: {
+  target: {
+    // urxvt, xterm, termite, etc.
     type: String,
-    required: false
-  }
-  screenshot: {
-    type: String,
-    required: false
+    required: true
   },
   tags: {
     type: String[],
     required: false
   }
-  themes: {
-    type: mongoose.Schema.Types.ObjectId[],
-    ref: 'Theme',
+  yaml: {
+    type: String,
     required: true
   }
-  // creator: {
+  // author: {
   //   type: mongoose.Schema.Types.ObjectId,
   //   ref: 'User',
   //   required: true
@@ -39,4 +31,4 @@ var suiteSchema = new Schema({
   // This is commented out until we have a User schema
 });
 
-module.exports = connection.model('Suite', suiteSchema);
+module.exports = connection.model('Theme', themeSchema);

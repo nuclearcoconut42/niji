@@ -4,7 +4,7 @@
   "description": "YAML theme repo for use with zenbu.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,12 @@
   },
   "homepage": "https://github.com/metakirby5/niji#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "debug": "^2.2.0",
     "express": "^4.14.0",
-    "mongodb": "^2.2.9"
+    "graceful-fs": "^4.1.6",
+    "lodash": "^4.15.0",
+    "mongoose": "^4.4.12",
+    "serve-favicon": "^2.3.0"
   }
 }
