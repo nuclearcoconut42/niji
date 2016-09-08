@@ -30,3 +30,18 @@ router.post '/theme', (req, res, next) ->
     return res.status(201).json
       message: 'Saved theme'
       obj: result
+
+router.get '/theme', (req, res, next) ->
+  Theme.find
+    req.query
+    (err, doc) ->
+      if err
+        return res.status(404).json
+          title: 'An error occurred'
+          error: err
+      if doc
+        return res.status(200).json
+          message: 'Success'
+          obj: doc
+      return res.status(404).json
+        title: 'No results'

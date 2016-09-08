@@ -29,3 +29,18 @@ router.post '/suite', (req, res, next) ->
     return res.status(201).json
       message: 'Saved suite'
       obj: result
+
+router.get '/suite', (req, res, next) ->
+  Suite.find
+    req.query
+    (err, doc) ->
+      if err
+        return res.status(404).json
+          title: 'An error occurred'
+          error: err
+      if doc
+        return res.status(200).json
+          message: 'Success'
+          obj: doc
+      return res.status(404).json
+        title: 'No results'
