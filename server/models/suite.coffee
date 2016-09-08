@@ -1,11 +1,11 @@
-{Schema} = require 'mongoose'
+mongoose = require 'mongoose'
 
-module.exports = connection.model 'Suite', new Schema
+module.exports = mongoose.model 'Suite', new mongoose.Schema
   name:
     type: String
     required: true
   # author:
-  #   type: Schema.Types.ObjectId
+  #   type: mongoose.Schema.Types.ObjectId
   #   ref: 'User'
   #   required: true
   description:
