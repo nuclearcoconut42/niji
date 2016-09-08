@@ -1,6 +1,6 @@
-{Schema} = require 'mongoose'
+mongoose = require 'mongoose'
 
-module.exports = connection.model 'Theme', new Schema
+module.exports = mongoose.model 'Theme', new mongoose.Schema
   name:
     type: String
     required: true
