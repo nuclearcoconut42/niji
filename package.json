@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/metakirby5/niji#readme",
   "dependencies": {
+    "bcrypt": "^0.8.7",
     "coffee-script": "^1.10.0",
     "express": "^4.14.0",
     "lodash": "^4.15.0",
